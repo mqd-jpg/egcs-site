@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200" role="img">
+  <title>EG Computer Solutions</title>
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0%" stop-color="#0b6ef6" />
+      <stop offset="100%" stop-color="#0b9df6" />
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" rx="18" fill="#fff" />
+  <g transform="translate(28,28)" fill="url(#g)">
+    <rect width="144" height="40" rx="8" />
+    <rect y="70" width="96" height="40" rx="8" />
+  </g>
+  <text x="30" y="170" font-family="Inter, Arial" font-size="16" fill="#0f172a">EG Computer</text>
+</svg>

@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EG Computer Solutions & Enterprises</title>
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="EG Computer Solutions & Enterprises — Computer repair, parts, CCTV, and networking services." />
+  <link rel="icon" href="assets/logo.jpg" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">
+        <img src="assets/logo.jpg" alt="EG Computer Solutions logo" class="logo" />
+        <span class="brand-name">EG COMPUTER SOLUTIONS AND ENTERPRISES</span>
+      </a>
+      <nav class="nav">
+        <a href="#">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="services.html">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1>Reliable repairs. Quality parts. Trusted installations.</h1>
+          <p>We repair computers, supply parts, install CCTV and build secure networks for homes and businesses.</p>
+          <div class="hero-cta">
+            <!-- <a class="btn primary" href="#contact">Get a Quote</a> -->
+            <a class="btn ghost" href="services.html">Our Services</a>
+          </div>
+        </div>
+        <div class="hero-art">
+          <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" class="hero-svg">
+            <rect width="100%" height="100%" rx="12" fill="#f4f7fb" />
+            <g transform="translate(40,40)">
+              <rect x="0" y="0" width="160" height="110" rx="8" fill="#0b6ef6" opacity="0.1"/>
+              <rect x="20" y="20" width="120" height="70" rx="6" fill="#0b6ef6" />
+            </g>
+            <circle cx="350" cy="250" r="30" fill="#0b6ef6" opacity="0.1"/>
+            <circle cx="60" cy="250" r="20" fill="#0b6ef6" opacity="0.1"/>
+
+            <text x="220" y="120" font-size="20" fill="#0f172a" font-weight="bold">
+              EG COMPUTER
+            </text>
+            <text x="230" y="160" font-size="20" fill="#0f172a" font-weight="bold">
+              SOLUTIONS
+            </text>
+            <text x="130" y="199" font-size="16" fill="#555">
+              Reliable IT Services
+            </text>
+
+
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+     <section class="carousel-section">
+          <h2>Featured Services</h2>
+          <div class="carousel" aria-label="Featured services carousel">
+            <div class="carousel-track">
+              <article class="carousel-item active">
+                <img src="assets/network-installation-team.jpg" alt="Sample service 1" />
+                <div class="carousel-caption">
+                  <h3>Network Installation</h3>
+                  <p>Fast diagnosis and repair with trusted local service.</p>
+                </div>
+              </article>
+              <article class="carousel-item">
+                <img src="assets/computer.jpg" alt="Sample service 2" />
+                <div class="carousel-caption">
+                  <h3>Parts & Upgrades</h3>
+                  <p>Upgrade your PC with reliable components and installation support.</p>
+                </div>
+              </article>
+              <article class="carousel-item">
+                <img src="assets/CCTV-Installation.jpg" alt="Sample service 3" />
+                <div class="carousel-caption">
+                  <h3>CCTV Systems</h3>
+                  <p>Secure your property with professional CCTV installation.</p>
+                </div>
+              </article>
+            </div>
+            <button class="carousel-btn prev" aria-label="Previous slide">‹</button>
+            <button class="carousel-btn next" aria-label="Next slide">›</button>
+            <div class="carousel-dots">
+              <button class="carousel-dot active" aria-label="Slide 1"></button>
+              <button class="carousel-dot" aria-label="Slide 2"></button>
+              <button class="carousel-dot" aria-label="Slide 3"></button>
+            </div>
+          </div>
+        </section>
+      </div>
+
+    <section id="about" class="about">
+      <div class="container">
+        <h2>About EG Computer Solutions</h2>
+        <p>At EG Computer Solutions & Enterprises, we are dedicated to providing reliable IT solutions and hardware services tailored to the needs of businesses and individuals. With expertise in computer systems, peripherals, and enterprise support, we aim to deliver technology that empowers productivity and growth.
+          Our team combines technical knowledge with customer-focused service, ensuring that every project — from troubleshooting to full-scale system integration — is handled with precision and care. We believe in building long-term partnerships by offering innovative solutions, responsive support, and trusted advice.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container contact-inner">
+        <div class="contact-card">
+          <h2>Contact Us</h2>
+          <p>Email: <a href="mailto:egcomputers2014@gmail.com">egcomputers2014@gmail.com</a></p>
+          <p>Phone: <a href="tel:(035) 422-7164">(035) 422-7164</a></p>
+          <p>Address: 100 San Juan St, Dumaguete City, 6200 Negros Oriental </p>
+          <p>Or send a quick message below and we'll reply shortly.</p>
+          <form class="contact-form" action="contact.php" method="post">
+            <input type="text" name="phone" style="display:none" aria-hidden="true" />
+            <label>
+              <span>Name</span>
+              <input type="text" name="name" required />
+            </label>
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" required />
+            </label>
+            <label>
+              <span>Message</span>
+              <textarea name="message" rows="5" required></textarea>
+            </label>
+            <div class="form-actions">
+              <button class="btn primary" type="submit">Send Message</button>
+              <a class="btn ghost" href="mailto:info@egcomputersolutions.com">Email Us</a>
+            </div>
+          </form>
+        </div>
+        <div class="map-card">
+          <h3>Find Us</h3>
+          <div class="map-wrapper">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d445.37825516980405!2d123.3047963!3d9.309155!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33ab6ee1b5f4390b%3A0xe3b914a500d433c4!2sEG%20Computer%20Solutions!5e1!3m2!1sen!2sph!4v1783662739379!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin">
+              width="600"
+              height="450"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> EG Computer Solutions & Enterprises — All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Set current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Form submission feedback
+    (function(){
+      var params = new URLSearchParams(location.search);
+      if (params.get('sent')){
+        alert('Thanks — your message was received. We will reply shortly.');
+        history.replaceState(null, '', location.pathname);
+      }
+      if (params.get('error')){
+        alert('There was a problem sending your message. Please try again later.');
+        history.replaceState(null, '', location.pathname);
+      }
+    })();
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href !== '#' && document.querySelector(href)) {
+          e.preventDefault();
+          document.querySelector(href).scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+    // Intersection Observer for scroll animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-in');
+        }
+      });
+    }, observerOptions);
+
+    // Observe all sections and cards
+    document.querySelectorAll('section, .card, .carousel, h2, p').forEach(el => {
+      if (!el.classList.contains('animate-in')) {
+        observer.observe(el);
+      }
+    });
+
+    // Carousel functionality
+    const track = document.querySelector('.carousel-track');
+    if (track) {
+      const slides = Array.from(track.querySelectorAll('.carousel-item'));
+      const prevButton = document.querySelector('.carousel-btn.prev');
+      const nextButton = document.querySelector('.carousel-btn.next');
+      const dots = Array.from(document.querySelectorAll('.carousel-dot'));
+      let currentIndex = 0;
+      let autoplayInterval;
+
+      function updateCarousel(index) {
+        const offset = index * -100;
+        track.style.transform = `translateX(${offset}%)`;
+        slides.forEach((slide, i) => slide.classList.toggle('active', i === index));
+        dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
+        currentIndex = index;
+      }
+
+      function moveNext() {
+        const nextIndex = (currentIndex + 1) % slides.length;
+        updateCarousel(nextIndex);
+      }
+
+      function movePrev() {
+        const prevIndex = (currentIndex - 1 + slides.length) % slides.length;
+        updateCarousel(prevIndex);
+      }
+
+      function startAutoplay() {
+        autoplayInterval = setInterval(moveNext, 5000);
+      }
+
+      function resetAutoplay() {
+        clearInterval(autoplayInterval);
+        startAutoplay();
+      }
+
+      nextButton.addEventListener('click', () => {
+        moveNext();
+        resetAutoplay();
+      });
+      prevButton.addEventListener('click', () => {
+        movePrev();
+        resetAutoplay();
+      });
+      dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+          updateCarousel(index);
+          resetAutoplay();
+        });
+      });
+
+      startAutoplay();
+    }
+
+    // Add parallax effect on scroll
+    const heroArt = document.querySelector('.hero-art');
+    if (heroArt) {
+      window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY;
+        heroArt.style.transform = `translateY(${scrollY * 0.3}px)`;
+      });
+    }
+  </script>
+</body>
+</html>
