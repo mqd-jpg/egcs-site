@@ -34,18 +34,24 @@ if (preg_match('/[\r\n]/', $name) || preg_match('/[\r\n]/', $email)) {
     exit;
 }
 
-$to = 'info@egcomputersolutions.com'; // update to your real destination
-$subject = 'Website contact — ' . mb_substr($name, 0, 64);
-$body = "Name: {$name}\nEmail: {$email}\n\nMessage:\n{$message}\n";
-$headers = "From: {$name} <{$email}>\r\n";
-$headers .= "Reply-To: {$email}\r\n";
+require __DIR__ . '/vendor/autoload.php';
 
-$mail_sent = false;
-try {
-    $mail_sent = @mail($to, $subject, $body, $headers);
-} catch (Exception $e) {
-    $mail_sent = false;
-}
+$brevoConfig = [
+    'host' => 'smtp-relay.brevo.com',
+    'port' => 587,
+    'username' => 'b1a18e001@smtp-brevo.com', // your Brevo SMTP login
+    'password' => 'YOUR_BREVO_SMTP_KEY',
+    'from_email' => 'mqdescallar@gmail.com',
+    'from_name' => 'EG Computer Solutions & Enterprises',
+    'to_email' => 'egcomputers2014@gmail.com',
+];
+
+$subject = 'Website contact — ' . mb_substr($name, 0, 64);
+// Flatten message newlines so the email body is exactly three lines as requested
+$safeMessage = preg_replace('/\R+/', ' ', $message);
+$body = "Name: {$name}\r\nEmail: {$email}\r\nMessage: {$safeMessage}\r\n";
+
+$mail_sent = send_brevo_mail($brevoConfig, $subject, $body, $name, $email);
 
 // Log submission to CSV (date, name, email, message, status)
 $logDir = __DIR__ . '/data';
@@ -66,4 +72,33 @@ if ($mail_sent) {
 }
 exit;
 
-?>
+function send_brevo_mail(array $config, string $subject, string $body, string $senderName, string $senderEmail): bool
+{
+    $mail = new \PHPMailer\PHPMailer\PHPMailer(true);
+
+    try {
+        $mail->isSMTP();
+        $mail->Host = $config['host'];
+        $mail->SMTPAuth = true;
+        $mail->Username = $config['username'];
+        $mail->Password = $config['password'];
+        $mail->SMTPSecure = \PHPMailer\PHPMailer\PHPMailer::ENCRYPTION_STARTTLS;
+        $mail->Port = $config['port'];
+        $mail->CharSet = 'UTF-8';
+        $mail->setFrom($config['from_email'], $config['from_name']);
+        $mail->addAddress($config['to_email']);
+        $mail->addReplyTo($senderEmail, $senderName);
+        $mail->Subject = $subject;
+        // Build both plain-text and HTML versions so email clients render line breaks correctly.
+        $plainBody = $body;
+        $htmlBody = nl2br(htmlspecialchars($plainBody));
+        $mail->isHTML(true);
+        $mail->Body = $htmlBody;
+        $mail->AltBody = $plainBody;
+        $mail->send();
+        return true;
+    } catch (\PHPMailer\PHPMailer\Exception $e) {
+        return false;
+    }
+}
+
