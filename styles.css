@@ -102,6 +102,8 @@ body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica
 .about-copy p{color:var(--muted); margin:0 0 18px; font-size:16px; line-height:1.9}
 .link-button{display:inline-flex; align-items:center; gap:8px; margin-top:8px; color:var(--accent); font-weight:700; text-decoration:none;}
 .about-media img{width:100%; height:auto; border-radius:18px; box-shadow:0 20px 45px rgba(15,23,42,0.12); object-fit:cover;}
+.about-products .about-media{order:1}
+.about-products .about-copy{order:2}
 .about-products .about-copy{padding-right:12px}
 .about-products .about-media{display:flex; align-items:center;}
 .about-products .about-media img{max-height:420px; width:100%;}
@@ -132,4 +134,5 @@ a:hover{text-decoration:underline; opacity:0.8}
   .map-wrapper iframe{min-height:260px}
   .header-inner{padding:8px 0}
   .nav{display:none}
+  .about-products{grid-template-columns:1fr}
 }
